@@ -53,7 +53,7 @@ int main(void) {
 	int sock; // socket descriptor for the server
 	struct sockaddr_in echoServAddr; // server address structure
 	struct sockaddr_in echoClntAddr; // client address structure
-	int cliAddrLen; // length client address
+	unsigned int cliAddrLen; // length client address
 	struct hostent *remoteHost;
 	// server socket creation
 	// SOCKET socket(int af, int type, int protocol); return socket_id or -1

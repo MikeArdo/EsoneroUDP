@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
 	struct in_addr *ina; // hostname address
 	struct hostent *host; // information of host hostname
 	struct hostent *remoteHost; // information of host fromAddr
-	int fromSize;
+	unsigned int fromSize;
 	int respStringLen;
 	char hostname[BUFFER_SIZE];
 	char *token;
