@@ -15,6 +15,7 @@
 #include <unistd.h>
 #endif
 
+#include <ctype.h>
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -69,14 +70,14 @@ int main(int argc, char *argv[]) {
 
 	// check hostname format
 	int i;
-	boolean flag = TRUE;
+	int flag = 1;
 	for (i = 0; i < strlen(hostname); i++) {
 		if (!(isalnum(hostname[i]) || hostname[i] == '-' || hostname[i] == '.'))
-			flag = FALSE;
+			flag = 0;
 	}
 
 	//  hostname resolution
-	if (flag == TRUE) {
+	if (flag == 1) {
 		host = gethostbyname(hostname);
 		if (host == NULL) {
 			fprintf(stderr, "gethostbyname() failed.\n");
